@@ -1,28 +1,39 @@
 {
-  "name": "@cometix/ccline",
+  "name": "@dragode/ddline",
   "version": "0.0.0",
-  "description": "CCometixLine - High-performance Claude Code StatusLine tool",
+  "description": "ddline - Claude Code StatusLine tool with multi-subdirectory Git support. Forked from CCometixLine (@cometix/ccline) with additional features.",
   "bin": {
-    "ccline": "./bin/ccline.js"
+    "ddline": "./bin/ddline.js"
   },
   "scripts": {
     "postinstall": "node scripts/postinstall.js"
   },
   "optionalDependencies": {
-    "@cometix/ccline-darwin-x64": "0.0.0",
-    "@cometix/ccline-darwin-arm64": "0.0.0",
-    "@cometix/ccline-linux-x64": "0.0.0",
-    "@cometix/ccline-linux-x64-musl": "0.0.0",
-    "@cometix/ccline-linux-arm64": "0.0.0",
-    "@cometix/ccline-linux-arm64-musl": "0.0.0",
-    "@cometix/ccline-win32-x64": "0.0.0"
+    "@dragode/ddline-darwin-x64": "0.0.0",
+    "@dragode/ddline-darwin-arm64": "0.0.0",
+    "@dragode/ddline-linux-x64": "0.0.0",
+    "@dragode/ddline-linux-x64-musl": "0.0.0",
+    "@dragode/ddline-linux-arm64": "0.0.0",
+    "@dragode/ddline-linux-arm64-musl": "0.0.0",
+    "@dragode/ddline-win32-x64": "0.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Haleclipse/CCometixLine"
+    "url": "https://github.com/Dragode/ddline"
   },
-  "keywords": ["claude", "statusline", "claude-code", "rust", "cli"],
-  "author": "Haleclipse",
+  "homepage": "https://github.com/Dragode/ddline",
+  "bugs": {
+    "url": "https://github.com/Dragode/ddline/issues"
+  },
+  "keywords": ["claude", "statusline", "claude-code", "rust", "cli", "monorepo", "git"],
+  "author": "Dragode",
+  "contributors": [
+    {
+      "name": "Haleclipse",
+      "url": "https://github.com/Haleclipse",
+      "note": "Original CCometixLine author"
+    }
+  ],
   "license": "MIT",
   "engines": {
     "node": ">=14.0.0"

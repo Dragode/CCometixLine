@@ -27,24 +27,24 @@ const platforms = [
 platforms.forEach(platform => {
   const sourceDir = path.join(__dirname, '..', 'platforms', platform);
   const targetDir = path.join(__dirname, '..', '..', 'npm-publish', platform);
-  
+
   // Create directory
   fs.mkdirSync(targetDir, { recursive: true });
-  
+
   // Read template package.json
   const templatePath = path.join(sourceDir, 'package.json');
   const packageJson = JSON.parse(fs.readFileSync(templatePath, 'utf8'));
-  
+
   // Update version
   packageJson.version = version;
-  
+
   // Write to target directory
   fs.writeFileSync(
     path.join(targetDir, 'package.json'),
     JSON.stringify(packageJson, null, 2) + '\n'
   );
-  
-  console.log(`✓ Prepared @cometix/ccline-${platform} v${version}`);
+
+  console.log(`✓ Prepared @dragode/ddline-${platform} v${version}`);
 });
 
 // Prepare main package
@@ -63,7 +63,7 @@ mainPackageJson.version = version;
 // Update optionalDependencies versions
 if (mainPackageJson.optionalDependencies) {
   Object.keys(mainPackageJson.optionalDependencies).forEach(dep => {
-    if (dep.startsWith('@cometix/ccline-')) {
+    if (dep.startsWith('@dragode/ddline-')) {
       mainPackageJson.optionalDependencies[dep] = version;
     }
   });
@@ -74,7 +74,7 @@ fs.writeFileSync(
   JSON.stringify(mainPackageJson, null, 2) + '\n'
 );
 
-console.log(`✓ Prepared @cometix/ccline v${version}`);
+console.log(`✓ Prepared @dragode/ddline v${version}`);
 console.log(`\n🎉 All packages prepared for version ${version}`);
 console.log('\nNext steps:');
 console.log('1. Copy binaries to platform directories');
