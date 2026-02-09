@@ -240,6 +240,8 @@ Displays: `Directory | Git Branch Status | Model | Context Window`
 
 For monorepo projects with multiple Git repositories in subdirectories, you can configure ddline to show branch and status for each:
 
+![Multi-Subdirectory Git Support](assets/multi-subdir-git.png)
+
 **Output example:**
 ```
 🗂️ api:master ✓ | 🗂️ web:feature/my-feature ●

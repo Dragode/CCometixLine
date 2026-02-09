@@ -232,6 +232,8 @@ ccline --patch ~/.local/share/fnm/node-versions/v24.4.1/installation/lib/node_mo
 
 对于包含多个 Git 仓库子目录的 monorepo 项目，可以配置 ddline 显示每个子目录的分支和状态：
 
+![多子目录 Git 支持](assets/multi-subdir-git.png)
+
 **输出示例：**
 ```
 🗂️ api:master ✓ | 🗂️ web:feature/my-feature ●
